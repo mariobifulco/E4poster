@@ -1,0 +1,1 @@
+marp poster.md --theme-set poster.css --html --allow-local-files --pdf -o output/QSplit-poster.pdf
