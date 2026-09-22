@@ -27,7 +27,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 
 <div class="lead">
 
-**Decompose. Optimize. Aggregate.**
+**Split. Optimize. Aggregate.**
 QSplit combines structure-aware decomposition, compact quantum encodings and configurable pipelines to bring large-scale optimization into hybrid HPC-Quantum workflows
 
 </div>
@@ -116,19 +116,17 @@ Performance depends on the **structure of the instance**, including sparsity, di
 
 ### A modular split-solve-aggregate pipeline
 
-Decompose the input, solve manageable subproblems and combine their solutions
-
 <div class="workflow">
 <div class="flow-step">Input QUBO</div>
 <div class="arrow">↓</div>
-<div class="flow-step red">Structure-aware split<span>Generate solver-compatible subproblems</span></div>
+<div class="flow-step red">Split<span>Generate solver-compatible subproblems</span></div>
 <div class="parallel">
 <div class="arrow">↓</div>
 <div class="arrow">↓</div>
 </div>
 <div class="parallel">
-<div class="flow-step">Classical solvers<span>HPC resources</span></div>
-<div class="flow-step">Quantum solvers<span>Quantum backends</span></div>
+<div class="flow-step">Classical solvers<span>HPC simulators, Emulators</span></div>
+<div class="flow-step">Quantum solvers<span>QPUs</span></div>
 </div>
 <div class="parallel">
 <div class="arrow">↓</div>
@@ -164,11 +162,25 @@ Study QAOA parameterizations that reduce the number of classical-quantum optimiz
 
 ### <span class="letter">C</span> HPC training + QC optimization
 
-Move QAOA training to HPC resources and use quantum resources for optimization, aiming to minimize costly communication
+Move QAOA parameter training to HPC resources and use quantum resources for optimization, aiming to minimize costly communication
 
-<div class="transfer"><span>HPC<br>Training</span><b>→</b><span>QC<br>Optimization</span></div>
+</div>
+<div class="method">
+
+### <span class="letter">D</span> Structure-aware pipeline
+
+Structure-aware splitting methods aim to preserve as much information as possible in each subproblem, simplifying subsequent aggregation
+
+</div>
+<div class="method">
+
+### <span class="letter">E</span> One-shot approach
+
+QSplit currently uses single-pass optimization, aiming to find the best possible solution with minimal resource use
+
 </div>
 </div>
+
 </div>
 
 <div class="column">
@@ -178,19 +190,16 @@ Move QAOA training to HPC resources and use quantum resources for optimization, 
 
 <div class="metrics">
 <div class="metric-row">
-<div class="metric">???<span>QUBO variables</span></div>
-<div class="metric">???<span>backend qubits</span></div>
+<div class="metric">50x<span>Handled problems</span></div>
+<div class="metric">- 99%<span>Variational loops</span></div>
 </div>
-<p>QSplit handles max-cut instances 10x the size of the QPU</p>
+<p>QSplit allows to optimize Max-Cut problems bigger than the QPU with a lightweight variational training with almost no performance drop</p>
 </div>
 
-<p class="result-note"><strong>Structure-aware decomposition</strong> preserves solution quality better than conventional recursive strategies as problem size increases.</p>
-
-<div class="placeholder results-placeholder">
-<span class="ph-label">Placeholder - Results plot</span>
-<strong>Solution quality<br>vs. problem size</strong>
-<p>Compare structure-aware and recursive decomposition</p>
-<p>Insert measured data,<br>legend and metric definition</p>
+<div class="placeholder comparison-placeholder">
+<span class="ph-label">Placeholder</span>
+<strong>Plot with results</strong>
+<p>Caption</p>
 </div>
 
 <div class="callout" style="margin-top:28px">
@@ -202,12 +211,6 @@ Reduce the size of each quantum task **and** the cost of its integration into th
 </div>
 </div>
 
-<div class="placeholder comparison-placeholder">
-<span class="ph-label">Placeholder - Pipeline comparison</span>
-<strong>Structure-aware / recursive splitting</strong>
-<p>Insert the comparative pipeline diagram</p>
-</div>
-
 <div class="block future">
 
 ## <span class="num">06</span> Future work
@@ -216,7 +219,7 @@ Reduce the size of each quantum task **and** the cost of its integration into th
 
 ### QOLC
 
-Quadratic objectives with linear constraints: incorporate constraints into mixers, including a native Knapsack formulation
+Quadratic objectives with linear constraints: incorporate constraints into mixers
 
 </div>
 <div class="item">

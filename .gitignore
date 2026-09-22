@@ -1,2 +1,4 @@
 /_site/
 output/QSplit-poster.pdf
+tmp_code
+.DS_Store

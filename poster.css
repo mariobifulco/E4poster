@@ -96,11 +96,9 @@ section .item h3 { font-size: 32px; }
 .method { margin-top: 23px; }
 .pce-placeholder {
   height: auto;
-  margin-top: 19px;
 }
 .pce-placeholder img {
   display: block;
-  max-width: 100%;
   height: auto;
 }
 .footer { flex-shrink: 0; }
