@@ -4,7 +4,7 @@ theme: qsplit
 size: A1
 math: katex
 paginate: false
-title: 'Qsplit: Scalable and Resource-Efficient Hybrid Quantum-Classical Optimization '
+title: 'QSplit: Scalable and Resource-Efficient Hybrid Quantum-Classical Optimization '
 author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci'
 # description: 'A modular framework for decomposition, quantum optimization and aggregation.'
 ---
@@ -17,7 +17,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 </div>
 <div>
 
-# <span class="project">Qsplit</span><br>Scalable and Resource-Efficient<br>Hybrid Quantum-Classical Optimization
+# <span class="project">QSplit</span><br>Scalable and Resource-Efficient<br>Hybrid Quantum-Classical Optimization
 
 <p class="authors">Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci</p>
 <p class="affiliation">University of Turin - Department of Computer Science</p>
@@ -27,8 +27,8 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 
 <div class="lead">
 
-**Split. Optimize. Aggregate.**
-QSplit combines structure-aware decomposition, compact quantum encodings and configurable pipelines to bring large-scale optimization into hybrid HPC-Quantum workflows
+**QSplit in a nutshell**
+TODO
 
 </div>
 
@@ -243,16 +243,21 @@ Use quantum solvers as probabilistic subroutines within iterative classical opti
 
 ### References
 
-[PLACEHOLDER: QSplit paper / preprint]<br>
-[PLACEHOLDER: PCE and QAOA references]
+[1] M. Sciorilli et al., "Towards large-scale quantum optimization solvers with few qubits," 2025.<br>
+[2] E. Farhi et al., "A Quantum Approximate Optimization Algorithm," 2014.
 
 </div>
 <div>
 
-### Paper - Code - Contact
+### Contact
 
-[PLACEHOLDER: repository / project URL]<br>
-[PLACEHOLDER: contact email]
+<div class="people">
+<img src="img/Aldinucci.png">
+<div class="contact-info">
+<strong>TODO</strong>
+<p>name.surname@unito.it</p>
+</div>
+</div>
 
 </div>
 <div class="placeholder qr"><span class="ph-label">Placeholder</span><strong>QR code</strong></div>
