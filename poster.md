@@ -20,7 +20,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 # <span class="project">QSplit</span><br>Scalable and Resource-Efficient<br>Hybrid Quantum-Classical Optimization
 
 <p class="authors">Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci</p>
-<p class="affiliation">University of Turin - Department of Computer Science</p>
+<!-- <p class="affiliation">University of Turin - Department of Computer Science</p> -->
 
 </div>
 </div>
@@ -28,7 +28,8 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 <div class="lead">
 
 **QSplit in a nutshell**
-TODO
+QSplit enables quantum optimization beyond current QPU limits through structure-aware decomposition, reduced classical-quantum communication overhead, compact problem representations, and modular HPC-QPU integration.
+
 
 </div>
 
@@ -260,5 +261,14 @@ Use quantum solvers as probabilistic subroutines within iterative classical opti
 </div>
 
 </div>
-<div class="placeholder qr"><span class="ph-label">Placeholder</span><strong>QR code</strong></div>
+<div class="qr-links" aria-label="Project resources">
+<div class="qr-resource">
+<h3><img class="qr-icon" src="img/github.svg" alt="">GitHub</h3>
+<div class="qr-code"><img src="img/qr-github.png" alt="QR code for the GitHub repository"></div>
+</div>
+<div class="qr-resource">
+<h3><img class="qr-icon" src="img/paper.svg" alt="">Paper</h3>
+<div class="qr-code"><img src="img/qr-paper.png" alt="QR code for the paper"></div>
+</div>
+</div>
 </div>
