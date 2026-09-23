@@ -4,7 +4,7 @@ theme: qsplit
 size: A1
 math: katex
 paginate: false
-title: 'QSplit: Hybrid HPC-Quantum Workflows for Large-Scale QUBO Optimization'
+title: 'Qsplit: Scalable and Resource-Efficient Hybrid Quantum-Classical Optimization '
 author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci'
 # description: 'A modular framework for decomposition, quantum optimization and aggregation.'
 ---
@@ -17,7 +17,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 </div>
 <div>
 
-# <span class="project">QSplit</span><br>Hybrid HPC-Quantum Workflows for Optimization
+# <span class="project">Qsplit</span><br>Scalable and Resource-Efficient<br>Hybrid Quantum-Classical Optimization
 
 <p class="authors">Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci</p>
 <p class="affiliation">University of Turin - Department of Computer Science</p>
@@ -59,6 +59,13 @@ Hybrid performance depends on minimizing communication between classical and qua
 Real industrail optimization problems are much larger than current noisy QPUs
 
 </div>
+<div class="item">
+
+### Backend portability
+
+Significant differences across quantum vendors require tailored approaches to orchestrate heterogeneous resources
+
+</div>
 </div>
 <div class="block">
 
@@ -74,9 +81,9 @@ Study decomposition and aggregation techniques for large QUBO instances
 <div style="height:22px"></div>
 <div class="callout">
 
-### Streamline the workflow
+### Pipeline
 
-Integrate quantum solvers efficiently into HPC optimization workflows, reducing classical-quantum interaction
+Integrate quantum solvers efficiently into HPC optimization workflows, reducing classical-quantum data movement
 
 </div>
 </div>
@@ -88,24 +95,13 @@ Integrate quantum solvers efficiently into HPC optimization workflows, reducing 
 
 <div class="formula">
 
-$$\min_{x\in\{0,1\}^{n}} x^{\mathsf T}Qx$$
-
-<div class="small">
-
-$Q\in\mathbb{R}^{n\times n}$, $n$ binary variables
+$$\min_{x\in\{0,1\}^{n}} x^{\mathsf T}Qx \footnotesize\qquad Q\in\mathbb{R}^{n\times n}, n\in \{0, 1\}$$
 
 </div>
-</div>
 
-QSplit is **problem-agnostic**: any problem expressed as a QUBO can enter the workflow
+QSplit is **problem-agnostic**, supporting any problem formulated as a QUBO, while its performance depends on the **instance structure**, including coefficient sparsity, distribution, and magnitude
 
-Performance depends on the **structure of the instance**, including sparsity, distribution and magnitude of its coefficients
-
-<div class="placeholder data-placeholder">
-<span class="ph-label">Placeholder - Dataset</span>
-<strong>Sparse QUBO / dense QUBO</strong>
-<p>Insert matrix plots and benchmark details</p>
-</div>
+![sparse-dense](img/sparse_dense.svg)
 
 </div>
 </div>
@@ -197,9 +193,11 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 </div>
 
 <div class="placeholder comparison-placeholder">
-<span class="ph-label">Placeholder</span>
-<strong>Plot with results</strong>
-<p>Caption</p>
+<p>
+
+![Quantum VS Classic](img/qvsc.svg)
+
+</p>
 </div>
 
 <div class="callout" style="margin-top:28px">

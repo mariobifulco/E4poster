@@ -104,4 +104,25 @@ section .item h3 { font-size: 32px; }
 .footer { flex-shrink: 0; }
 .data-placeholder { height: 175px; }
 .future { margin-top: 34px; }
-.comparison-placeholder { height: 170px; margin-top: 30px; }
+.comparison-placeholder {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.comparison-placeholder p {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.comparison-placeholder img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
