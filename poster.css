@@ -49,6 +49,10 @@ section li::marker { color: var(--red); }
 .placeholder p { font-size: 24px; color: #85878A; }
 .data-placeholder { height: 310px; }
 .workflow { margin-top: 25px; }
+.streamflow-intro { display: grid; grid-template-columns: 210px minmax(0, 1fr); align-items: center; gap: 20px; margin-top: 18px; }
+.streamflow-brand { display: block; }
+.streamflow-intro img { display: block; width: 210px; height: auto; }
+.streamflow-intro p { font-size: inherit; line-height: inherit; }
 .workflow p { margin: 0; line-height: 0; }
 .workflow img { display: block; width: 100%; height: auto; }
 .caption { font-size: 24px; margin-top: 16px !important; color: #74767A; }
@@ -69,40 +73,46 @@ section li::marker { color: var(--red); }
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: flex-center;
+  justify-content: flex-center;
   gap: 28px;
   border-top: 3px solid var(--gray);
   padding-top: 28px;
   margin-top: auto;
   font-size: 25px;
+  flex-shrink: 0;
 }
 
 .qr-links {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 18px;
 }
 
-.contact h3 {
-  margin-bottom: 13px;
+.contact {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
 }
-.footer h3 { font-size: 28px; margin-bottom: 13px; }
-.footer p + p { margin-top: 8px; }
+.resources-contact h3 { font-size: 28px; line-height: 32px; margin-bottom: 13px; }
+.resources-contact p + p { margin-top: 8px; }
 section .qr-resource h3 { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 13px; color: #000; font-size: 28px; line-height: 32px; }
 .qr-icon { display: block; width: 28px; height: 28px; flex-shrink: 0; }
-.qr-code { width: 144px; height: 144px; padding: 14px; background: #fff; }
+/* The SVGs include their own four-module white quiet zone. */
+.qr-code { width: 144px; height: 144px; background: #fff; }
 .qr-code img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .people {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
   height: auto;
 }
 
 .people img {
-  width: 130px;
-  height: 130px;
+  width: 94px;
+  height: 94px;
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;
@@ -113,7 +123,7 @@ section .qr-resource h3 { display: flex; align-items: center; justify-content: c
 }
 
 .contact-info p {
-  font-size: 24px;
+  font-size: 22px;
   overflow-wrap: anywhere;
 }
 /* Compact rhythm for print; explicit margins override the base Marp theme. */
@@ -139,7 +149,6 @@ section .item h3 { font-size: 32px; }
   display: block;
   height: auto;
 }
-.footer { flex-shrink: 0; }
 .data-placeholder { height: 175px; }
 .future { margin-top: 34px; }
 .comparison-placeholder {

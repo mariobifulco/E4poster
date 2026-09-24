@@ -17,7 +17,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 </div>
 <div>
 
-# <span class="project">QSplit</span><br>A Workflow-Oriented Hybrid<br>Quantum-Classical Optimization Framework
+# <span class="project">QSplit:</span> A Workflow-Oriented Hybrid<br>Quantum-Classical Optimization Framework
 
 <p class="authors">Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci</p>
 <!-- <p class="affiliation">University of Turin - Department of Computer Science</p> -->
@@ -93,7 +93,12 @@ QSplit is **problem-agnostic**, supporting any problem formulated as a QUBO, whi
 
 ### A modular split-solve-aggregate pipeline
 
-QSplit allows a modular workflow tailored for optimization problems and orchestrated via **Streamflow** workflow management system.
+QSplit organizes splitting, solving and aggregation into **workflows** that link tasks through data dependencies, enabling reuse of steps and interchangeable solver backends.
+
+<div class="streamflow-intro">
+<a class="streamflow-brand" href="https://streamflow.di.unito.it/about-s/"><img src="img/streamflow-logo-full.png" alt="StreamFlow - Towards Cloud-HPC Continuum"></a>
+<p>QSplit uses <strong>StreamFlow</strong>, a workflow management system, to execute these workflows on heterogeneous resources and manage data transfers across hybrid infrastructures.</p>
+</div>
 
 <div class="workflow">
 
@@ -192,7 +197,7 @@ Provide an optional refinement process in order to balance resource consumption 
 GitHub
 </h3>
 <div class="qr-code">
-<img src="img/qr-github.png" alt="GitHub QR code">
+<img src="img/qr-github.svg" alt="GitHub QR code">
 </div>
 </div>
 
@@ -202,7 +207,7 @@ GitHub
 Paper
 </h3>
 <div class="qr-code">
-<img src="img/qr-paper.png" alt="Paper QR code">
+<img src="img/qr-paper.svg" alt="Paper QR code">
 </div>
 </div>
 </div>
