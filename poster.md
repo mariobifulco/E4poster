@@ -4,7 +4,7 @@ theme: qsplit
 size: A1
 math: katex
 paginate: false
-title: 'QSplit: Scalable and Resource-Efficient Hybrid Quantum-Classical Optimization '
+title: 'QSplit: A Workflow-Oriented Hybrid Quantum–Classical Optimization Framework'
 author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci'
 # description: 'A modular framework for decomposition, quantum optimization and aggregation.'
 ---
@@ -17,7 +17,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 </div>
 <div>
 
-# <span class="project">QSplit</span><br>Scalable and Resource-Efficient<br>Hybrid Quantum-Classical Optimization
+# <span class="project">QSplit</span><br>A Workflow-Oriented Hybrid<br>Quantum-Classical Optimization Framework
 
 <p class="authors">Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci</p>
 <!-- <p class="affiliation">University of Turin - Department of Computer Science</p> -->
@@ -28,8 +28,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 <div class="lead">
 
 **QSplit in a nutshell**
-QSplit enables quantum optimization beyond current QPU limits through structure-aware decomposition, reduced classical-quantum communication overhead, compact problem representations, and modular HPC-QPU integration.
-
+QSplit enables quantum optimization beyond current QPU size through structure-aware decomposition, compact problem representations, and modular HPC-QPU integration.
 
 </div>
 
@@ -48,13 +47,6 @@ Quantum computing can act as an accelerator inside HPC workflows
 </div>
 <div class="item">
 
-### Communication has a cost
-
-Hybrid performance depends on minimizing communication between classical and quantum resources
-
-</div>
-<div class="item">
-
 ### Problems outgrow QPUs
 
 Real industrail optimization problems are much larger than current noisy QPUs
@@ -62,7 +54,7 @@ Real industrail optimization problems are much larger than current noisy QPUs
 </div>
 <div class="item">
 
-### Backend portability
+### Workflow portability
 
 Significant differences across quantum vendors require tailored approaches to orchestrate heterogeneous resources
 
@@ -82,7 +74,7 @@ Study decomposition and aggregation techniques for large QUBO instances
 <div style="height:22px"></div>
 <div class="callout">
 
-### Pipeline
+### HPC-Quantum integration
 
 Integrate quantum solvers efficiently into HPC optimization workflows, reducing classical-quantum data movement
 
@@ -113,34 +105,23 @@ QSplit is **problem-agnostic**, supporting any problem formulated as a QUBO, whi
 
 ### A modular split-solve-aggregate pipeline
 
+QSplit allows a modular workflow tailored for optimization problems and orchestrated via **Streamflow** workflow management system.
+
 <div class="workflow">
-<div class="flow-step">Input QUBO</div>
-<div class="arrow">↓</div>
-<div class="flow-step red">Split<span>Generate solver-compatible subproblems</span></div>
-<div class="parallel">
-<div class="arrow">↓</div>
-<div class="arrow">↓</div>
-</div>
-<div class="parallel">
-<div class="flow-step">Classical solvers<span>HPC simulators, Emulators</span></div>
-<div class="flow-step">Quantum solvers<span>QPUs</span></div>
-</div>
-<div class="parallel">
-<div class="arrow">↓</div>
-<div class="arrow">↓</div>
-</div>
-<div class="flow-step gray">Aggregate<span>Reconstruct a global solution</span></div>
-<div class="arrow">↓</div>
-<div class="flow-step">Output solution</div>
+
+![Split-solve-aggregate workflow: input QUBO, split into subproblems (B), parallel CPU, GPU and QPU solvers (A), aggregate a global solution (B), and one-shot output (C). Ellipses indicate additional solvers.](img/workflow.svg)
+
 </div>
 
 <div class="method">
 
-### <span class="letter">A</span> Compact quantum encoding
+### <span class="letter">A</span> Quantum solvers
 
-**Pauli Correlation Encoding (PCE)** represents logical QUBO variables through correlations over fewer qubits
+- **Fewer variational cycles**: Study QAOA parameterizations that reduce the number of classical-quantum optimization loops
+- **HPC training + QC optimization**: Move QAOA parameter training to HPC resources and use quantum resources for optimization
+- **Compact quantum encoding**: Pauli Correlation Encoding (PCE) represents logical QUBO variables through correlations over fewer qubits
 
-<div class="placeholder pce-placeholder">
+<div class="pce-placeholder">
 <p>
 
 ![PCE](img/pce.svg)
@@ -150,36 +131,20 @@ QSplit is **problem-agnostic**, supporting any problem formulated as a QUBO, whi
 </div>
 <div class="method">
 
-### <span class="letter">B</span> Fewer variational cycles
-
-Study QAOA parameterizations that reduce the number of classical-quantum optimization loops
-
-</div>
-<div class="method">
-
-### <span class="letter">C</span> HPC training + QC optimization
-
-Move QAOA parameter training to HPC resources and use quantum resources for optimization, aiming to minimize costly communication
-
-</div>
-<div class="method">
-
-### <span class="letter">D</span> Structure-aware pipeline
+### <span class="letter">B</span> Structure-aware pipeline
 
 Structure-aware splitting methods aim to preserve as much information as possible in each subproblem, simplifying subsequent aggregation
 
 </div>
 <div class="method">
 
-### <span class="letter">E</span> One-shot approach
+### <span class="letter">C</span> One-shot approach
 
 QSplit currently uses single-pass optimization, aiming to find the best possible solution with minimal resource use
 
 </div>
 </div>
-
 </div>
-
 <div class="column">
 <div class="block">
 
@@ -193,7 +158,7 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 <p>QSplit allows to optimize Max-Cut problems bigger than the QPU with a lightweight variational training with almost no performance drop</p>
 </div>
 
-<div class="placeholder comparison-placeholder">
+<div class="comparison-placeholder">
 <p>
 
 ![Quantum VS Classic](img/qvsc.svg)
@@ -240,35 +205,38 @@ Use quantum solvers as probabilistic subroutines within iterative classical opti
 </div>
 
 <div class="footer">
-<div>
 
-### References
-
-[1] M. Sciorilli et al., "Towards large-scale quantum optimization solvers with few qubits," 2025.<br>
-[2] E. Farhi et al., "A Quantum Approximate Optimization Algorithm," 2014.
-
+<div class="qr-links" aria-label="Project resources">
+<div class="qr-resource">
+<h3>
+<img class="qr-icon" src="img/github.svg" alt="">
+GitHub
+</h3>
+<div class="qr-code">
+<img src="img/qr-github.png" alt="GitHub QR code">
 </div>
-<div>
+</div>
 
-### Contact
+<div class="qr-resource">
+<h3>
+<img class="qr-icon" src="img/paper.svg" alt="">
+Paper
+</h3>
+<div class="qr-code">
+<img src="img/qr-paper.png" alt="Paper QR code">
+</div>
+</div>
+</div>
 
+<div class="contact">
+<h3>Contact</h3>
 <div class="people">
-<img src="img/Aldinucci.png">
+<img src="img/Aldinucci.png" alt="">
 <div class="contact-info">
 <strong>TODO</strong>
 <p>name.surname@unito.it</p>
 </div>
 </div>
+</div>
 
-</div>
-<div class="qr-links" aria-label="Project resources">
-<div class="qr-resource">
-<h3><img class="qr-icon" src="img/github.svg" alt="">GitHub</h3>
-<div class="qr-code"><img src="img/qr-github.png" alt="QR code for the GitHub repository"></div>
-</div>
-<div class="qr-resource">
-<h3><img class="qr-icon" src="img/paper.svg" alt="">Paper</h3>
-<div class="qr-code"><img src="img/qr-paper.png" alt="QR code for the paper"></div>
-</div>
-</div>
 </div>
