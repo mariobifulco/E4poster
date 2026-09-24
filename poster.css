@@ -8,6 +8,7 @@ section {
   color: var(--gray); background: white; display: flex; flex-direction: column;
   justify-content: flex-start; letter-spacing: -.35px;
   border-top: 20px solid var(--red);
+  border-bottom: 20px solid var(--red);
 }
 section * { box-sizing: border-box; }
 section h1, section h2, section h3, section p, section ul { margin: 0; }
@@ -67,12 +68,13 @@ section li::marker { color: var(--red); }
 
 .footer {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 45px;
+  gap: 28px;
   border-top: 3px solid var(--gray);
   padding-top: 28px;
-  margin-top: 43px;
+  margin-top: auto;
   font-size: 25px;
 }
 

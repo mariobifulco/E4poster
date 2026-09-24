@@ -64,21 +64,9 @@ Significant differences across quantum vendors require tailored approaches to or
 
 ## <span class="num">02</span> Objectives
 
-<div class="callout">
+- **Scale the problem**: Study decomposition and aggregation techniques for large QUBO instances
+- **HPC-Quantum integration**: Integrate quantum solvers efficiently into HPC optimization workflows, reducing classical-quantum data movement
 
-### Scale the problem
-
-Study decomposition and aggregation techniques for large QUBO instances
-
-</div>
-<div style="height:22px"></div>
-<div class="callout">
-
-### HPC-Quantum integration
-
-Integrate quantum solvers efficiently into HPC optimization workflows, reducing classical-quantum data movement
-
-</div>
 </div>
 <div class="block">
 
@@ -158,6 +146,8 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 <p>QSplit allows to optimize Max-Cut problems bigger than the QPU with a lightweight variational training with almost no performance drop</p>
 </div>
 
+<p><br>QSplit aims to reduce the size of each quantum task and the cost of its integration into the classical workflow</p>
+
 <div class="comparison-placeholder">
 <p>
 
@@ -165,16 +155,7 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 
 </p>
 </div>
-
-<div class="callout" style="margin-top:28px">
-
-### Two complementary levers
-
-Reduce the size of each quantum task **and** the cost of its integration into the classical workflow
-
 </div>
-</div>
-
 <div class="block future">
 
 ## <span class="num">06</span> Future work
@@ -195,12 +176,10 @@ Extend to Quadratic Unconstrained Integer Optimization to address a broader clas
 </div>
 <div class="item">
 
-### Exact optimization
+### Refinement process
 
-Use quantum solvers as probabilistic subroutines within iterative classical optimization methods
+Provide an optional refinement process in order to balance resource consumption and quality solution
 
-</div>
-</div>
 </div>
 </div>
 
@@ -239,4 +218,6 @@ Paper
 </div>
 </div>
 
+</div>
+</div>
 </div>
