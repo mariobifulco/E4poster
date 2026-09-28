@@ -94,6 +94,14 @@ section li::marker { color: var(--red); }
   min-width: 0;
   text-align: center;
 }
+.icsc-logo { display: none; }
+section.with-icsc .icsc-logo {
+  display: block;
+  width: 70mm;
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+}
 .resources-contact h3 { font-size: 39.586px; line-height: 45.241px; margin-bottom: 18.379px; }
 .resources-contact p + p { margin-top: 11.31px; }
 section .qr-resource h3 { display: flex; align-items: center; justify-content: center; gap: 14.138px; margin: 0 0 18.379px; color: #000; font-size: 39.586px; line-height: 45.241px; }

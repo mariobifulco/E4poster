@@ -1,12 +1,12 @@
 ---
 marp: true
 theme: qsplit
+class: with-icsc
 size: A1
 math: katex
 paginate: false
 title: 'QSplit: A Workflow-Oriented Hybrid Quantum–Classical Optimization Framework'
 author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci'
-# description: 'A modular framework for decomposition, quantum optimization and aggregation.'
 ---
 
 <div class="masthead">
@@ -119,6 +119,8 @@ Paper
 </div>
 </div>
 </div>
+
+<img class="icsc-logo" src="img/icsc.svg" alt="ICSC - Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing">
 
 </div>
 </div>
