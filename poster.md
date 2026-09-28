@@ -85,6 +85,42 @@ QSplit is **problem-agnostic**, supporting any problem formulated as a QUBO, whi
 ![sparse-dense](img/sparse_dense.svg)
 
 </div>
+<div class="footer">
+
+<div class="qr-links" aria-label="Project resources">
+<div class="qr-resource">
+<h3>
+<img class="qr-icon" src="img/github.svg" alt="">
+GitHub
+</h3>
+<div class="qr-code">
+<img src="img/qr-github.svg" alt="GitHub QR code">
+</div>
+</div>
+
+<div class="qr-resource">
+<h3>
+<img class="qr-icon" src="img/paper.svg" alt="">
+Paper
+</h3>
+<div class="qr-code">
+<img src="img/qr-paper.svg" alt="Paper QR code">
+</div>
+</div>
+</div>
+
+<div class="contact">
+<h3>Contact</h3>
+<div class="people">
+<img src="img/Aldinucci.png" alt="">
+<div class="contact-info">
+<strong>TODO</strong>
+<p>name.surname@unito.it</p>
+</div>
+</div>
+</div>
+
+</div>
 </div>
 <div class="column middle">
 <div class="block">
@@ -141,7 +177,14 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 <div class="column">
 <div class="block">
 
-## <span class="num">05</span> Results
+## <span class="num">05</span> Deployment
+
+![QSplit deployments: IBM QAOA and D-Wave simulated annealing on CPUs, and CUDA-Q with GPU acceleration, on the HPC4AI cluster at UniTo; real QPUs: IQM Garnet and Quantinuum H2.](img/deployment.png)
+
+</div>
+<div class="block future">
+
+## <span class="num">06</span> Results
 
 <div class="metrics">
 <div class="metric-row">
@@ -163,7 +206,7 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 </div>
 <div class="block future">
 
-## <span class="num">06</span> Future work
+## <span class="num">07</span> Future work
 
 <div class="item">
 
@@ -186,43 +229,6 @@ Extend to Quadratic Unconstrained Integer Optimization to address a broader clas
 Provide an optional refinement process in order to balance resource consumption and quality solution
 
 </div>
-</div>
-
-<div class="footer">
-
-<div class="qr-links" aria-label="Project resources">
-<div class="qr-resource">
-<h3>
-<img class="qr-icon" src="img/github.svg" alt="">
-GitHub
-</h3>
-<div class="qr-code">
-<img src="img/qr-github.svg" alt="GitHub QR code">
-</div>
-</div>
-
-<div class="qr-resource">
-<h3>
-<img class="qr-icon" src="img/paper.svg" alt="">
-Paper
-</h3>
-<div class="qr-code">
-<img src="img/qr-paper.svg" alt="Paper QR code">
-</div>
-</div>
-</div>
-
-<div class="contact">
-<h3>Contact</h3>
-<div class="people">
-<img src="img/Aldinucci.png" alt="">
-<div class="contact-info">
-<strong>TODO</strong>
-<p>name.surname@unito.it</p>
-</div>
-</div>
-</div>
-
 </div>
 </div>
 </div>

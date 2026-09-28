@@ -150,7 +150,7 @@ section .item h3 { font-size: 32px; }
   height: auto;
 }
 .data-placeholder { height: 175px; }
-.future { margin-top: 34px; }
+.future { margin-top: 12px; }
 .comparison-placeholder {
   width: 100%;
   height: auto;
