@@ -23,6 +23,7 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 <!-- <p class="affiliation">University of Turin - Department of Computer Science</p> -->
 
 </div>
+<img class="icsc-logo" src="img/icsc.svg" alt="ICSC - Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing">
 </div>
 
 <div class="lead">
@@ -112,15 +113,13 @@ Paper
 <div class="contact">
 <h3>Contact</h3>
 <div class="people">
-<img src="img/Aldinucci.png" alt="">
+<img src="img/bifulco.webp" alt="">
 <div class="contact-info">
-<strong>TODO</strong>
-<p>name.surname@unito.it</p>
+<strong>Mario Bifulco</strong>
+<p>mario.bifulco@unito.it</p>
 </div>
 </div>
 </div>
-
-<img class="icsc-logo" src="img/icsc.svg" alt="ICSC - Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing">
 
 </div>
 </div>

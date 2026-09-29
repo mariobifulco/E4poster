@@ -95,12 +95,13 @@ section li::marker { color: var(--red); }
   text-align: center;
 }
 .icsc-logo { display: none; }
+section.with-icsc .masthead { grid-template-columns: 318.103px minmax(0, 1fr) 150mm; }
 section.with-icsc .icsc-logo {
   display: block;
-  width: 70mm;
+  width: 150mm;
   max-width: 100%;
   height: auto;
-  align-self: center;
+  justify-self: end;
 }
 .resources-contact h3 { font-size: 39.586px; line-height: 45.241px; margin-bottom: 18.379px; }
 .resources-contact p + p { margin-top: 11.31px; }
