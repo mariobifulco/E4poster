@@ -19,8 +19,8 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 
 # <span class="project">QSplit:</span> A Workflow-Oriented Hybrid<br>Quantum-Classical Optimization Framework
 
-<p class="authors">Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Aldinucci</p>
-<!-- <p class="affiliation">University of Turin - Department of Computer Science</p> -->
+<p class="authors"><strong>Mario Bifulco</strong> - Supervisors: Luca Roversi and Doriana Medić</p>
+<p class="affiliation">University of Turin - Department of Computer Science</p>
 
 </div>
 <img class="icsc-logo" src="img/icsc.svg" alt="ICSC - Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing">
@@ -28,8 +28,8 @@ author: 'Mario Bifulco, Francesco Medina, Doriana Medić, Luca Roversi, Marco Al
 
 <div class="lead">
 
-**QSplit in a nutshell**
-QSplit enables quantum optimization beyond current QPU size through structure-aware decomposition, compact problem representations, and modular HPC-QPU integration.
+**Research focus**
+How can hybrid quantum-classical workflows tackle optimization problems beyond QPU capacity while balancing solution quality and computational cost? QSplit investigates decomposition, compact encodings, and HPC-QPU integration
 
 </div>
 
@@ -43,21 +43,21 @@ QSplit enables quantum optimization beyond current QPU size through structure-aw
 
 ### Quantum as an accelerator
 
-Quantum computing can act as an accelerator inside HPC workflows
+Quantum computing is a candidate accelerator within HPC optimization workflows
 
 </div>
 <div class="item">
 
 ### Problems outgrow QPUs
 
-Real industrail optimization problems are much larger than current noisy QPUs
+Large optimization instances exceed the capacity of current noisy QPUs
 
 </div>
 <div class="item">
 
 ### Workflow portability
 
-Significant differences across quantum vendors require tailored approaches to orchestrate heterogeneous resources
+Different quantum backends require portable orchestration of heterogeneous resources
 
 </div>
 </div>
@@ -65,68 +65,41 @@ Significant differences across quantum vendors require tailored approaches to or
 
 ## <span class="num">02</span> Objectives
 
-- **Scale the problem**: Study decomposition and aggregation techniques for large QUBO instances
-- **HPC-Quantum integration**: Integrate quantum solvers efficiently into HPC optimization workflows, reducing classical-quantum data movement
+- **Algorithmic objective**: Preserve solution quality when splitting large QUBOs into QPU-sized tasks
+- **Systems objective**: Reduce variational training and data-transfer costs in portable HPC-quantum workflows
 
 </div>
 <div class="block">
 
-## <span class="num">03</span> Problem & data
+## <span class="num">03</span> Research questions
+
+- **RQ1 - Decomposition**: How can QUBO structure guide splitting and aggregation to preserve global solution quality?
+- **RQ2 - Quantum cost**: Can compact encodings and reduced variational training lower resource use while preserving quality?
+- **RQ3 - Integration**: How can heterogeneous solvers be integrated into portable HPC workflows with low overhead?
+
+</div>
+<div class="block">
+
+## <span class="num">04</span> Problem & data
 
 **Quadratic Unconstrained Binary Optimization (QUBO)**
 
 <div class="formula">
 
-$$\min_{x\in\{0,1\}^{n}} x^{\mathsf T}Qx \footnotesize\qquad Q\in\mathbb{R}^{n\times n}, n\in \{0, 1\}$$
+$$\min_{x\in\{0,1\}^{n}} x^{\mathsf T}Qx \footnotesize\qquad Q\in\mathbb{R}^{n\times n}$$
 
 </div>
 
-QSplit is **problem-agnostic**, supporting any problem formulated as a QUBO, while its performance depends on the **instance structure**, including coefficient sparsity, distribution, and magnitude
+QSplit accepts problems formulated as QUBOs. **Max-Cut** is the current test case; generalization depends on **instance structure**, including coefficient sparsity, distribution, and magnitude
 
 ![sparse-dense](img/sparse_dense.svg)
-
-</div>
-<div class="footer">
-
-<div class="qr-links" aria-label="Project resources">
-<div class="qr-resource">
-<h3>
-<img class="qr-icon" src="img/github.svg" alt="">
-GitHub
-</h3>
-<div class="qr-code">
-<img src="img/qr-github.svg" alt="GitHub QR code">
-</div>
-</div>
-
-<div class="qr-resource">
-<h3>
-<img class="qr-icon" src="img/paper.svg" alt="">
-Paper
-</h3>
-<div class="qr-code">
-<img src="img/qr-paper.svg" alt="Paper QR code">
-</div>
-</div>
-</div>
-
-<div class="contact">
-<h3>Contact</h3>
-<div class="people">
-<img src="img/bifulco.webp" alt="">
-<div class="contact-info">
-<strong>Mario Bifulco</strong>
-<p>mario.bifulco@unito.it</p>
-</div>
-</div>
-</div>
 
 </div>
 </div>
 <div class="column middle">
 <div class="block">
 
-## <span class="num">04</span> Methodology
+## <span class="num">05</span> Methodology
 
 ### A modular split-solve-aggregate pipeline
 
@@ -134,7 +107,7 @@ QSplit organizes splitting, solving and aggregation into **workflows** that link
 
 <div class="streamflow-intro">
 <a class="streamflow-brand" href="https://streamflow.di.unito.it/about-s/"><img src="img/streamflow-logo-full.png" alt="StreamFlow - Towards Cloud-HPC Continuum"></a>
-<p>QSplit uses <strong>StreamFlow</strong>, a workflow management system, to execute these workflows on heterogeneous resources and manage data transfers across hybrid infrastructures.</p>
+<p>For <strong>RQ3</strong>, QSplit uses <strong>StreamFlow</strong> to execute workflows on heterogeneous resources and manage data transfers across hybrid infrastructures.</p>
 </div>
 
 <div class="workflow">
@@ -147,8 +120,10 @@ QSplit organizes splitting, solving and aggregation into **workflows** that link
 
 ### <span class="letter">A</span> Quantum solvers
 
-- **Fewer variational cycles**: Study QAOA parameterizations that reduce the number of classical-quantum optimization loops
-- **HPC training + QC optimization**: Move QAOA parameter training to HPC resources and use quantum resources for optimization
+To address **RQ2**:
+
+- **Fewer variational cycles**: Study QAOA parameterizations with fewer classical-quantum optimization loops
+- **HPC training + QC optimization**: Train QAOA parameters on HPC resources, then use quantum resources for optimization
 - **Compact quantum encoding**: Pauli Correlation Encoding (PCE) represents logical QUBO variables through correlations over fewer qubits
 
 <div class="pce-placeholder">
@@ -163,14 +138,14 @@ QSplit organizes splitting, solving and aggregation into **workflows** that link
 
 ### <span class="letter">B</span> Structure-aware pipeline
 
-Structure-aware splitting methods aim to preserve as much information as possible in each subproblem, simplifying subsequent aggregation
+To address **RQ1**, study splitting methods that preserve variable interactions within subproblems and limit information loss during aggregation
 
 </div>
 <div class="method">
 
 ### <span class="letter">C</span> One-shot approach
 
-QSplit currently uses single-pass optimization, aiming to find the best possible solution with minimal resource use
+A single pass provides a baseline to study solution quality, resource use, and refinement
 
 </div>
 </div>
@@ -178,24 +153,24 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 <div class="column">
 <div class="block">
 
-## <span class="num">05</span> Deployment
+## <span class="num">06</span> Experimental platform
 
 ![QSplit deployments: IBM QAOA and D-Wave simulated annealing on CPUs, and CUDA-Q with GPU acceleration, on the HPC4AI cluster at UniTo; real QPUs: IQM Garnet and Quantinuum H2.](img/deployment.png)
 
 </div>
 <div class="block future">
 
-## <span class="num">06</span> Results
+## <span class="num">07</span> Current results
 
 <div class="metrics">
 <div class="metric-row">
-<div class="metric">50x<span>Handled problems</span></div>
+<div class="metric">50x<span>Problem size vs QPU</span></div>
 <div class="metric">- 99%<span>Variational loops</span></div>
 </div>
-<p>QSplit allows to optimize Max-Cut problems bigger than the QPU with a lightweight variational training with almost no performance drop</p>
+<p>QSplit tackles problems larger than the QPU with reduced variational training and little loss of solution quality</p>
 </div>
 
-<p><br>QSplit aims to reduce the size of each quantum task and the cost of its integration into the classical workflow</p>
+<p class="result-note">Initial evidence for <strong>RQ1-RQ2</strong> on Max-Cut; generalization to other QUBOs and integration costs (<strong>RQ3</strong>) remain to be evaluated</p>
 
 <div class="comparison-placeholder">
 <p>
@@ -207,27 +182,27 @@ QSplit currently uses single-pass optimization, aiming to find the best possible
 </div>
 <div class="block future">
 
-## <span class="num">07</span> Future work
+## <span class="num">08</span> PhD roadmap
 
 <div class="item">
 
-### QOLC
+### RQ1 - Refinement process
 
-Quadratic objectives with linear constraints: incorporate constraints into mixers
+Develop optional post-aggregation refinement and assess the quality-resource trade-off
 
 </div>
 <div class="item">
 
-### QUIO
+### RQ2-RQ3 - Resource cost
 
-Extend to Quadratic Unconstrained Integer Optimization to address a broader class of real-world problems
+Broaden benchmarks across QUBO structures and backends; measure qubit use, variational loops, runtime, and transfer costs
 
 </div>
 <div class="item">
 
-### Refinement process
+### Beyond QUBO
 
-Provide an optional refinement process in order to balance resource consumption and quality solution
+Explore constraint-aware mixers (QOLC) and integer formulations (QUIO)
 
 </div>
 </div>
